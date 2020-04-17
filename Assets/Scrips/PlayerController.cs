@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip ("In ms^-1")][SerializeField] float speed = 10f;
     [Tooltip("In m")] [SerializeField] float xRange = 5f;
     [Tooltip("In m")] [SerializeField] float yRange = 4f;
+    [SerializeField] GameObject[] guns;
 
     [Header("Screen-position Based")]
     [SerializeField] float positionPitchFactor = -5f;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlRollFactor = -15f;
 
+
     // We can name several variable together if there are the same type
     float xThrow, yThrow;
 
@@ -27,28 +29,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isControlEnabled) {
+        if (isControlEnabled)
+        {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
         }
     }
 
     void OnPlayerDeath()
     {
         isControlEnabled = false;
-    }
-
-    private void ProcessRotation()
-    {
-        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
-        float pitchDuetoControlThrow = yThrow * controlPitchFactor;
-        float pitch = pitchDueToPosition + pitchDuetoControlThrow;
-
-        float yaw = transform.localPosition.x * positionYawFactor;
-
-        float roll = xThrow * controlRollFactor;
-
-        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
     private void ProcessTranslation()
@@ -67,5 +58,45 @@ public class PlayerController : MonoBehaviour
         rawYPos = Mathf.Clamp(rawYPos, -4f, 4f);
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    private void ProcessRotation()
+    {
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDuetoControlThrow = yThrow * controlPitchFactor;
+        float pitch = pitchDueToPosition + pitchDuetoControlThrow;
+
+        float yaw = transform.localPosition.x * positionYawFactor;
+
+        float roll = xThrow * controlRollFactor;
+
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
     }
 }
