@@ -1100,8 +1100,8 @@ MonoBehaviour:
   deathFX: {fileID: 1013729536631358826, guid: 02c2a79e9888b45448872b66dafca6d4, type: 3}
   parent: {fileID: 1927927760}
   scoreHitBase: 12
-  scorePerHit: 0
   bonusTimeScore: 42
+  Hits: 3
 --- !u!1001 &411853843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1875551938172112, guid: bb7599871142bcd41bace4e2b151829a, type: 3}
       propertyPath: m_Name
-      value: Ship_06 (1)
+      value: Hunter (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4069866118125656, guid: bb7599871142bcd41bace4e2b151829a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1143,7 +1143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4069866118125656, guid: bb7599871142bcd41bace4e2b151829a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4069866118125656, guid: bb7599871142bcd41bace4e2b151829a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1369,7 +1369,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1090395654553690, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_Name
-      value: Ship_01
+      value: Falcon (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1401,7 +1401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1544,8 +1544,8 @@ MonoBehaviour:
   deathFX: {fileID: 1013729536631358826, guid: 02c2a79e9888b45448872b66dafca6d4, type: 3}
   parent: {fileID: 1927927760}
   scoreHitBase: 12
-  scorePerHit: 0
   bonusTimeScore: 42
+  Hits: 3
 --- !u!4 &574384267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1799436435734008325, guid: 1f07da8656f78ea4e914e0ded3f3192b,
@@ -1620,8 +1620,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590120654}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 476.4026, y: -402.22433, z: -2517.7593}
+  m_LocalRotation: {x: 0.20226622, y: 0.63343406, z: 0.17654258, w: -0.7257289}
+  m_LocalPosition: {x: -103.00787, y: -109.42073, z: -428.51428}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1006131663}
@@ -1999,7 +1999,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1875551938172112, guid: bb7599871142bcd41bace4e2b151829a, type: 3}
       propertyPath: m_Name
-      value: Ship_06
+      value: Hunter (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4069866118125656, guid: bb7599871142bcd41bace4e2b151829a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2525,8 +2525,8 @@ MonoBehaviour:
   deathFX: {fileID: 1013729536631358826, guid: 02c2a79e9888b45448872b66dafca6d4, type: 3}
   parent: {fileID: 1927927760}
   scoreHitBase: 12
-  scorePerHit: 0
   bonusTimeScore: 42
+  Hits: 3
 --- !u!4 &1022966828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5fda35eb4a1424b4491c40761157503b,
@@ -2647,7 +2647,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1875551938172112, guid: bb7599871142bcd41bace4e2b151829a, type: 3}
       propertyPath: m_Name
-      value: Ship_06 (2)
+      value: Hunter (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4069866118125656, guid: bb7599871142bcd41bace4e2b151829a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2679,7 +2679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4069866118125656, guid: bb7599871142bcd41bace4e2b151829a, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4069866118125656, guid: bb7599871142bcd41bace4e2b151829a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2771,10 +2771,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1959379935}
-  - {fileID: 1533556338}
-  - {fileID: 1594591151}
   - {fileID: 411853844}
   - {fileID: 1056136536}
+  - {fileID: 1533556338}
+  - {fileID: 1594591151}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3556,7 +3556,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1090395654553690, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_Name
-      value: Ship_01 (1)
+      value: Falcon (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3588,7 +3588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4232234352724882, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3814,8 +3814,8 @@ MonoBehaviour:
   deathFX: {fileID: 1013729536631358826, guid: 02c2a79e9888b45448872b66dafca6d4, type: 3}
   parent: {fileID: 1927927760}
   scoreHitBase: 12
-  scorePerHit: 0
   bonusTimeScore: 42
+  Hits: 3
 --- !u!4 &1692955941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1799436435734008325, guid: 1f07da8656f78ea4e914e0ded3f3192b,
@@ -4348,8 +4348,8 @@ MonoBehaviour:
   deathFX: {fileID: 1013729536631358826, guid: 02c2a79e9888b45448872b66dafca6d4, type: 3}
   parent: {fileID: 1927927760}
   scoreHitBase: 12
-  scorePerHit: 0
   bonusTimeScore: 42
+  Hits: 3
 --- !u!4 &2090472143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 993ea8bb75999c7428346ed0c7e3bde5,
@@ -4474,6 +4474,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 2993043579274876571, guid: 7423da1bad0407b4d9caeff50151bd28,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993043579274876571, guid: 7423da1bad0407b4d9caeff50151bd28,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826465407350073829, guid: 7423da1bad0407b4d9caeff50151bd28,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826465407350073829, guid: 7423da1bad0407b4d9caeff50151bd28,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun Left
+      objectReference: {fileID: 0}
     - target: {fileID: 1825890109724883647, guid: 7423da1bad0407b4d9caeff50151bd28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4529,16 +4549,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1826465407350073829, guid: 7423da1bad0407b4d9caeff50151bd28,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1826465407350073829, guid: 7423da1bad0407b4d9caeff50151bd28,
-        type: 3}
-      propertyPath: m_Name
-      value: Gun Left
-      objectReference: {fileID: 0}
     - target: {fileID: 1826465406965370168, guid: 7423da1bad0407b4d9caeff50151bd28,
         type: 3}
       propertyPath: guns.Array.size
@@ -4564,16 +4574,6 @@ PrefabInstance:
       propertyPath: guns.Array.data[1]
       value: 
       objectReference: {fileID: 655985195}
-    - target: {fileID: 2993043579274876571, guid: 7423da1bad0407b4d9caeff50151bd28,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2993043579274876571, guid: 7423da1bad0407b4d9caeff50151bd28,
-        type: 3}
-      propertyPath: m_Name
-      value: Gun Right
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7423da1bad0407b4d9caeff50151bd28, type: 3}
 --- !u!1001 &4232591544603549910
