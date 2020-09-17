@@ -4706,6 +4706,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4895,6 +4896,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9635,6 +9637,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9746,6 +9749,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9797,8 +9801,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.8761675, y: 0.8566917, z: 3.2520072}
-  m_Center: {x: 0.000015079975, y: -0.000015199184, z: -1.4582086e-14}
+  m_Size: {x: 2.46, y: 0.6, z: 2.87}
+  m_Center: {x: 0.000015079975, y: -0.09, z: -0.18}
 --- !u!114 &1826465406965370168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9814,6 +9818,9 @@ MonoBehaviour:
   speed: 10
   xRange: 8.5
   yRange: 5
+  guns:
+  - {fileID: 1826465407350073829}
+  - {fileID: 2993043579274876571}
   positionPitchFactor: -5
   positionYawFactor: 6
   controlPitchFactor: -20
@@ -9839,10 +9846,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1825890109724883647}
     m_Modifications:
-    - target: {fileID: 3517739961105560829, guid: 282183bf4cdd24249a826a7dfae8dea5,
+    - target: {fileID: 3517739961105560816, guid: 282183bf4cdd24249a826a7dfae8dea5,
         type: 3}
-      propertyPath: m_Name
-      value: Bullets Right
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517739961105560816, guid: 282183bf4cdd24249a826a7dfae8dea5,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517739961105560816, guid: 282183bf4cdd24249a826a7dfae8dea5,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3517739961105560818, guid: 282183bf4cdd24249a826a7dfae8dea5,
         type: 3}
@@ -9899,6 +9916,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3517739961105560819, guid: 282183bf4cdd24249a826a7dfae8dea5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f63c576739a709747a1a571260d4fabd, type: 2}
+    - target: {fileID: 3517739961105560819, guid: 282183bf4cdd24249a826a7dfae8dea5,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: f63c576739a709747a1a571260d4fabd, type: 2}
+    - target: {fileID: 3517739961105560829, guid: 282183bf4cdd24249a826a7dfae8dea5,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517739961105560829, guid: 282183bf4cdd24249a826a7dfae8dea5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 282183bf4cdd24249a826a7dfae8dea5, type: 3}
+--- !u!1 &2993043579274876571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3517739961105560829, guid: 282183bf4cdd24249a826a7dfae8dea5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1826465406988444262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2993043579274876564 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3517739961105560818, guid: 282183bf4cdd24249a826a7dfae8dea5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1826465406988444262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2993043580119375128
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1825890109724883647}
+    m_Modifications:
     - target: {fileID: 3517739961105560816, guid: 282183bf4cdd24249a826a7dfae8dea5,
         type: 3}
       propertyPath: CollisionModule.enabled
@@ -9913,36 +9971,6 @@ PrefabInstance:
         type: 3}
       propertyPath: CollisionModule.collisionMessages
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3517739961105560819, guid: 282183bf4cdd24249a826a7dfae8dea5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f63c576739a709747a1a571260d4fabd, type: 2}
-    - target: {fileID: 3517739961105560819, guid: 282183bf4cdd24249a826a7dfae8dea5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: f63c576739a709747a1a571260d4fabd, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 282183bf4cdd24249a826a7dfae8dea5, type: 3}
---- !u!4 &2993043579274876564 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3517739961105560818, guid: 282183bf4cdd24249a826a7dfae8dea5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1826465406988444262}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2993043580119375128
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1825890109724883647}
-    m_Modifications:
-    - target: {fileID: 3517739961105560829, guid: 282183bf4cdd24249a826a7dfae8dea5,
-        type: 3}
-      propertyPath: m_Name
-      value: Bullets Left
       objectReference: {fileID: 0}
     - target: {fileID: 3517739961105560818, guid: 282183bf4cdd24249a826a7dfae8dea5,
         type: 3}
@@ -9999,21 +10027,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3517739961105560816, guid: 282183bf4cdd24249a826a7dfae8dea5,
-        type: 3}
-      propertyPath: CollisionModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3517739961105560816, guid: 282183bf4cdd24249a826a7dfae8dea5,
-        type: 3}
-      propertyPath: CollisionModule.type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3517739961105560816, guid: 282183bf4cdd24249a826a7dfae8dea5,
-        type: 3}
-      propertyPath: CollisionModule.collisionMessages
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3517739961105560819, guid: 282183bf4cdd24249a826a7dfae8dea5,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10024,8 +10037,24 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: f63c576739a709747a1a571260d4fabd, type: 2}
+    - target: {fileID: 3517739961105560829, guid: 282183bf4cdd24249a826a7dfae8dea5,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517739961105560829, guid: 282183bf4cdd24249a826a7dfae8dea5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 282183bf4cdd24249a826a7dfae8dea5, type: 3}
+--- !u!1 &1826465407350073829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3517739961105560829, guid: 282183bf4cdd24249a826a7dfae8dea5,
+    type: 3}
+  m_PrefabInstance: {fileID: 2993043580119375128}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1826465407350073834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3517739961105560818, guid: 282183bf4cdd24249a826a7dfae8dea5,
